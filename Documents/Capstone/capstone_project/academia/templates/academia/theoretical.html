@@ -1,0 +1,37 @@
+{% extends 'academia/base.html' %} {% block subtopics %}
+<option value="{% url 'algorithms'%}">Algorithms</option>
+<option value="{% url 'academia-home'%}">Computation Theory</option>
+<option value="{% url 'academia-home'%}">Data Structures</option>
+<option value="{% url 'academia-home'%}">Computational Complexity</option>
+<option value="{% url 'academia-home'%}">Discrete Math</option>
+<option value="{% url 'academia-home'%}">Information Theory</option>
+<option value="{% url 'academia-home'%}">Hardware</option>
+{% endblock subtopics %}
+
+<!-- Search column !-->
+{% block description %}
+
+<p class="title is-1">Theoretical Computer Science</p>
+<p class="subtitle">
+  This field comprises two sub-fields: the theory of algorithms, which involves
+  the design and analysis of computational procedures; and complexity theory,
+  which involves efforts to prove that no efficient algorithms exist in certain
+  cases, and which investigates the classification system for computational
+  tasks. Time, memory, randomness and parallelism are typical measures of
+  computational effort. Theoretical computer science is a natural bridge between
+  mathematics and computer science, and both fields have benefited from the
+  connection. The field is very active, with exciting breakthroughs and
+  intriguing challenges. The P =? NP problem is one of the seven of the Clay
+  Millennium Problems. The recent polynomial time primality algorithm received a
+  Clay Math research award.
+</p>
+
+{% endblock description %} {% block recommendation %}
+<li>Discrete Math</li>
+<li><a href="{% url 'academia-home'%}">(Programming Languages)</a></li>
+<li>Data Structures</li>
+<li>Theory of Computation</li>
+<li>Algorithms</li>
+<li>Cryptography</li>
+<li>Hardware</li>
+{% endblock recommendation %}

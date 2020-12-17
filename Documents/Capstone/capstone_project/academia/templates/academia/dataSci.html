@@ -1,0 +1,43 @@
+{% extends 'academia/base.html' %}
+<!---->
+{% block subtopics %}
+<option value="{% url 'academia-home'%}">Big Data</option>
+<option value="{% url 'academia-home'%}">Data Mining</option>
+<option value="{% url 'academia-home'%}">Human Computer Interaction</option>
+<option value="{% url 'academia-home'%}">Virtual Reality</option>
+<option value="{% url 'academia-home'%}">Machine Learning</option>
+<option value="{% url 'academia-home'%}">Artificial Intelligence</option>
+<option value="{% url 'academia-home'%}">Robotics</option>
+<option value="{% url 'academia-home'%}">Natural Language Processing</option>
+<option value="{% url 'academia-home'%}">Computer Vision</option>
+<option value="{% url 'academia-home'%}">Image Processing</option>
+<option value="{% url 'academia-home'%}">Super Computing</option>
+{% endblock subtopics %}
+
+<!-- Search column !-->
+{% block description %}
+
+<p class="title is-1">Data Science and Computer Application</p>
+<p class="subtitle">
+  Data science is an inter-disciplinary field that uses scientific methods,
+  processes, algorithms and systems to extract knowledge and insights from many
+  structural and unstructured data. Data science is related to data mining,
+  machine learning and big data. Data science is a "concept to unify statistics,
+  data analysis and their related methods" in order to "understand and analyze
+  actual phenomena" with data. It uses techniques and theories drawn from many
+  fields within the context of mathematics, statistics, computer science, domain
+  knowledge and information science. Application of Computer Science is simply a
+  field that focus on the way computer science and engineering is applied to
+  make things happen in our world.
+</p>
+
+{% endblock description %} {% block recommendation %}
+<li>Computer Architecture</li>
+<li>Programming Languages</li>
+<li>Operating Systems</li>
+<li>Compilers</li>
+<li>Computer Graphics</li>
+<li>Data Management</li>
+<li>Networks</li>
+<li>Software Engineering</li>
+{% endblock recommendation %}

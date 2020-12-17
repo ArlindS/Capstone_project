@@ -1,0 +1,211 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Academia</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="{% static 'academia/bulma.min.css'%}" />
+
+    <!-- import the webpage's javascript file -->
+    <script src="{% static 'academia/script.js'%}" defer></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+
+  <body>
+    <!--Header-->
+
+    <main>
+      <div>
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+          <div class="navbar-brand">
+            <a class="navbar-item" href="{% url 'academia-home'%}">
+              <img
+                src="https://cdn.glitch.com/0e6a1e14-05f6-4049-a9be-b096fa254aca%2Facademia-logo-white.png?v=1603725240057"
+                width="130"
+              />
+            </a>
+
+            <a
+              role="button"
+              class="navbar-burger burger"
+              aria-label="menu"
+              aria-expanded="false"
+              data-target="navbarBasicExample"
+            >
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+            </a>
+          </div>
+
+          <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+              <a class="navbar-item" href="{% url 'academia-home' %}"> Home </a>
+
+              <a class="navbar-item"> About </a>
+
+              <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link"> Subjects </a>
+
+                <div class="navbar-dropdown">
+                  <a class="navbar-item"> About </a>
+                  <a class="navbar-item"> Jobs </a>
+                  <a class="navbar-item"> Contact </a>
+                  <hr class="navbar-divider" />
+                  <a class="navbar-item"> Report an issue </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="navbar-end">
+              <div class="navbar-item">
+                <div class="buttons">
+                  {% if user.is_authenticated %}
+                  <a class="button is-light" href="{% url 'profile' %}">
+                    Profile
+                  </a>
+                  <a class="button is-light" href="{% url 'logout' %}">
+                    Log out
+                  </a>
+                  {% else %}
+                  <a
+                    class="button is-info is-outlined"
+                    href="{% url 'login' %}"
+                  >
+                    Log in
+                  </a>
+                  <a class="button is-primary" href="{% url 'register' %}">
+                    <strong>Sign up</strong>
+                  </a>
+                  {% endif %}
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+      <div class="columns">
+        <!-- Subjects column !-->
+        <div class="column is-narrow">
+          <div class="box" style="width: 200px">
+            <p class="title is-5">Subjects</p>
+            <div class="select is-multiple">
+              <select multiple size="20" onchange="location = this.value;">
+                <option value="{% url 'academia-home'%}">Physics</option>
+                <option value="{% url 'academia-home'%}">Biology</option>
+                <option value="{% url 'academia-compSci'%}">
+                  Computer Science
+                </option>
+                <option value="{% url 'academia-home'%}">Mathematics</option>
+                <option value="{% url 'academia-home'%}">Psychology</option>
+                <option value="{% url 'academia-home'%}">Philosophy</option>
+                <option value="{% url 'academia-home'%}">Chemistry</option>
+                <option value="{% url 'academia-home'%}">History</option>
+                <option value="{% url 'academia-home'%}">Art</option>
+                <option value="{% url 'academia-home'%}">Music</option>
+                <option value="{% url 'academia-home'%}">Literature</option>
+                <option value="{% url 'academia-home'%}">Sports Science</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Search column !-->
+
+        <div class="column">
+          <div class="box">
+            <p class="title is-5">Welcome!</p>
+            <p class="subtitle">
+              Academia is a resource repository of peer and professional
+              reviewed resources. Select a topic of interest or search for a
+              specific one.
+            </p>
+            <div class="field is-grouped">
+              <p class="field has-addons" style="width: 500px">
+                <input class="input" type="text" placeholder="Search subject" />
+              </p>
+              <p class="control">
+                <a class="button is-info"> Search </a>
+              </p>
+            </div>
+            <div class="tile is-ancestor">
+              <div class="tile is-vertical is-8">
+                <div class="tile">
+                  <div class="tile is-parent is-vertical">
+                    <article class="tile is-child notification is-primary">
+                      <p class="title">Physics</p>
+                      <p class="subtitle">Learn More</p>
+                    </article>
+                    <article class="tile is-child notification is-warning">
+                      <p class="title">Biology</p>
+                      <p class="subtitle">Learn more</p>
+                      <figure class="image is-4by3">
+                        <img
+                          src="https://cdn.glitch.com/0e6a1e14-05f6-4049-a9be-b096fa254aca%2Fbio.png?v=1603739042996"
+                        />
+                      </figure>
+                    </article>
+                  </div>
+                  <div class="tile is-parent">
+                    <article class="tile is-child notification is-info">
+                      <p class="title">
+                        <a href="{% url 'academia-compSci'%}"
+                          >Computer Science</a
+                        >
+                      </p>
+                      <p class="subtitle">Learn More</p>
+                      <figure class="image is-4by3">
+                        <img
+                          src="https://cdn.glitch.com/0e6a1e14-05f6-4049-a9be-b096fa254aca%2FPngItem_5140218.png?v=1603727209000"
+                        />
+                      </figure>
+                    </article>
+                  </div>
+                </div>
+                <div class="tile is-parent">
+                  <article class="tile is-child notification is-danger">
+                    <p class="title">Astronomy</p>
+                    <p class="subtitle">Learn More</p>
+                    <div class="content">
+                      <!-- Content -->
+                    </div>
+                  </article>
+                </div>
+              </div>
+
+              <div class="tile is-parent">
+                <article class="tile is-child notification is-success">
+                  <div class="content">
+                    <p class="title">Chemistry</p>
+                    <p class="subtitle">Learn More</p>
+                    <figure class="image is-1by1">
+                      <img
+                        src="https://cdn.glitch.com/0e6a1e14-05f6-4049-a9be-b096fa254aca%2Fclipart3342132.png?v=1603740790675"
+                      />
+                    </figure>
+                    <div class="content">
+                      <!-- Content -->
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+
+    <footer id="contact">
+      <div class="content-wrap"></div>
+    </footer>
+  </body>
+</html>

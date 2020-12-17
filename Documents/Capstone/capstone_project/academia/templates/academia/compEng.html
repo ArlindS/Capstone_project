@@ -1,0 +1,34 @@
+{% extends 'academia/base.html' %} {% block subtopics %}
+<option value="ComputerArchitecture.html">Computer Architecture</option>
+<option value="ProgrammingLanguages.html">Programming Languages</option>
+<option value="SoftwareEngineering.html">Software Engineering</option>
+<option value="OperatingSystems.html">Operating Systems</option>
+<option value="Networks.html">Networks</option>
+<option value="Compilers.html">Compilers</option>
+<option value="DataManagement.html">Data Management</option>
+<option value="ComputerGraphics.html">Computer Graphics</option>
+{% endblock subtopics %}
+
+<!-- Search column !-->
+{% block description %}
+
+<p class="title is-1">Computer Engineering</p>
+<p class="subtitle">
+  Computer engineering (CoE or CpE) is a branch of engineering that integrates
+  several fields of computer science and electronic engineering required to
+  develop computer hardware and software. Computer engineers usually have
+  training in electronic engineering (or electrical engineering), software
+  design, and hardware-software integration instead of only software engineering
+  or electronic engineering.
+</p>
+
+{% endblock description %} {% block recommendation %}
+<li>Computer Architecture</li>
+<li>Programming Languages</li>
+<li>Operating Systems</li>
+<li>Compilers</li>
+<li>Computer Graphics</li>
+<li>Data Management</li>
+<li>Networks</li>
+<li>Software Engineering</li>
+{% endblock recommendation %}
