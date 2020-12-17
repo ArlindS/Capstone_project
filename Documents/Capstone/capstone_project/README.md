@@ -52,11 +52,11 @@ There are platforms available for discussions like reddit, educational platforms
 
 Download the main directory and open in your preferred IDE. An example of the how it should look, in this case, in visual studio code would be:
 
-<img src="media/profile_pics/outlook.png" alt="webapp screenshot" width="850" height="500">
+<img src="https://github.com/ArlindS/Capstone_project/blob/master/Documents/Capstone/capstone_project/media/pofile_pics/outlook.png" alt="webapp screenshot" width="850" height="500">
 
 To run the main program you will run the following command in your terminal after you navigate to the main folder directory (“capstone_project”): python3 manage.py runserver
 
-<img src="media/profile_pics/run.png" alt="webapp screenshot" width="850" height="500">
+<img src="https://github.com/ArlindS/Capstone_project/blob/master/Documents/Capstone/capstone_project/media/pofile_pics/run.png" alt="webapp screenshot" width="850" height="500">
 
 This is the result if everything compiles correctly. Then either click the http://127.0.0.1:8000/ or copy and paste it onto your browser.
 
